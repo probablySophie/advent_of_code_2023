@@ -8,8 +8,8 @@ Run `cargo run --bin day_01` to run day 1, and increment the number to run the r
 
 All of my given inputs are attached and included in the files.
 
-- [x] Day 01; Done 03/12/23
-- [ ] Day 02;
+- [x] Day 01; \*\* Done 03/12/23
+- [x] Day 02; \*\* Done 04/12/23
 - [ ] Day 03;
 - [ ] Day 04;
 - [ ] Day 05;
