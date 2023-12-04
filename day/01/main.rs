@@ -1,4 +1,6 @@
 
+// https://adventofcode.com/2023/day/1
+
 fn main() {
     println!("Day 1!\n");
 

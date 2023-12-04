@@ -1,6 +1,8 @@
 pub use advent_of_code_2023::shared;
 
-static DEBUG: bool = true;
+//https://adventofcode.com/2023/day/2
+
+static DEBUG: bool = false;
 
 fn main()
 {
