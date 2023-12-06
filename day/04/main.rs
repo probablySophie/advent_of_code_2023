@@ -1,6 +1,6 @@
 pub use advent_of_code_2023::shared;
 
-//https://adventofcode.com/2023/day/3
+//https://adventofcode.com/2023/day/4
 
 static DEBUG: bool = true;
 
