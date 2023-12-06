@@ -56,11 +56,21 @@ fn main()
 		}
 		else 
 		{
-			part_1_sum = part_1(
+			if DEBUG
+			{
+				print!("{} : ", line_num);
+			}
+
+			part_1_sum += part_1(
 				lines.get(line_num-1).unwrap().clone(), 
 				line.clone(), 
 				lines.get(line_num+1).unwrap().clone()
 			);
+
+			if DEBUG
+			{
+				println!("");
+			}
 		}
 
 		line_num += 1;
@@ -108,26 +118,40 @@ fn part_1(prev_line: String, line: String, next_line: String) -> i32
                 num_symbols += is_symbol(*next_chars.get(i).unwrap());
                 num_symbols += is_symbol(*next_chars.get(i+1).unwrap());
                 
-                if (num_symbols > 0)
+                if num_symbols > 0
                 {
                     is_part = true;
-                }
-                
-                print!("{}", prev_chars.get(i).unwrap());
-                
+                } 
             }
             else if num != 0
             {
                 // if it IS a part, then add the current number to the sum
                 if is_part
                 {
+					if DEBUG
+					{
+						print!("{} ",num);
+					}
+
                     sum += num;
                     is_part = false; // reset is_part
-                    num = 0; // reset num
                 }
+
+				num = 0;
             }
         }
     }
+
+	// catch any final numbers that don't have a symbol after them
+	if is_part
+	{
+		if DEBUG
+		{
+			print!("{} ",num);
+		}
+
+		sum += num;
+	}
 
 	return sum;
 }
